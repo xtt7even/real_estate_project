@@ -1,0 +1,50 @@
+.Navbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 110px;
+}
+
+.Navbar--branding
+{
+    display: flex;
+    gap: 7px;
+    margin-left: 30px; 
+    max-width: 300px; 
+    
+}
+
+.Navbar--brandname
+{
+    font: Inter;
+    font-size: 48px;
+    color: #062331;
+    font-weight: 500;
+}
+
+.Navbar--logo--img
+{
+    /* padding: 7px; */
+    align-self: center;
+    max-width: 70px;
+}
+
+.Navbar--navigation
+{
+    display: flex;
+    gap: 45px;
+    margin-right: 30px;
+}
+
+.Navbar--nav--btn
+{
+    font-family: Inter;
+    font-weight: 300;
+    font-size: 24px;
+    color: #062331;
+
+    padding: 0;
+    border: none;
+    background: none;
+}
