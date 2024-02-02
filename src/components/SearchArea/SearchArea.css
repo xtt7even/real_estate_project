@@ -1,0 +1,103 @@
+.Photo--crop
+{
+    max-width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.Searcharea--photo
+{   
+    max-width: 100%;
+    height: auto;
+    transform: translate(0, -30%);
+}
+
+.Searcharea--slogan > h2
+{
+    text-shadow: 0px 2px 6px #000000;
+    font-family: Inter;
+    font-size: 32px;
+    margin: 29px 0 29px 0;
+    color: white;
+}
+
+.Searcharea--container
+{
+    position: relative;
+}
+
+.Searcharea--area
+{
+    position: absolute;
+    top: 31%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    min-width: 500px;
+    max-height: 300px;
+    display: flex;
+    flex-direction: column; 
+    /* //vertical-align: middle; */
+    align-items: center;
+    /* z-index: 2; */
+    /* margin-left: 30%; */
+}
+
+.Searcharea--searchbar
+{
+
+    width: 387px;
+    height: 72px;
+    background-color: white;
+    border-radius: 17px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #D6D6D6;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* padding: 0px 24px 0px 24px; */
+}
+
+.Searcharea--input
+{
+    all: unset;
+    margin-left: 24px;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.90);
+}
+
+.Searcharea--input::placeholder{ color: rgba(0, 0, 0, 0.41) }
+
+
+
+.Searcharea--search--btn
+{
+    all: unset;
+    margin-right: 24px;
+}
+
+.Searcharea--search--btn:focus 
+{
+    outline: revert;
+}
+
+.Searcharea--search--btn:hover
+{
+    cursor: pointer;
+}
+
+.Searcharea--searchicon--img
+{
+    width: 20px;
+    transition: all 0.1s ease;
+}
+
+.Searcharea--searchicon--img:hover
+{
+    align-self: center;
+    width: 25px;
+}

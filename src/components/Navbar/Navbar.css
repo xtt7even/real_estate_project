@@ -15,6 +15,15 @@
     
 }
 
+.Navbar--branding:hover
+{
+    /* display: flex;
+    gap: 7px;
+    margin-left: 30px; 
+    max-width: 300px;  */
+    cursor: pointer;
+}
+
 .Navbar--brandname
 {
     font: Inter;
@@ -47,4 +56,10 @@
     padding: 0;
     border: none;
     background: none;
+}
+
+.Navbar--nav--btn:hover
+{
+    cursor: pointer;
+    color: #1ba5e9;
 }
