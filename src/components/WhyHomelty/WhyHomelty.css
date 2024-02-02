@@ -1,0 +1,58 @@
+.Checkmark--img
+{
+    width: 37px;
+}
+
+.Benefit--container
+{
+    display: flex;
+    align-items: center;
+    column-gap: 26px;
+
+    word-spacing: 3px;
+}
+
+.Benefits--list 
+{
+    box-sizing: border-box;
+    width: 637px;
+    height: 367px;
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 9px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-color: #E7E7E7;
+    border-width: 1px;
+
+    padding: 33px;
+
+    font-size: 16px;
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.Benefits--list > h2
+{
+    font-size: 32px;
+    font-family: Inter;
+    font-weight: 500;
+}
+
+.Benefits--photo
+{
+    width:367px;
+    
+    border-width: 1px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.25);
+    border-color: #454545;
+}
+
+.Whyhomelty--container
+{
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

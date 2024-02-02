@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import propertyList from './properties_temp.json';
 import ListingSmallCard from "./ListingSmallCard";
 
-//Using local template JSON for now, as there is no API yet
+//Using local template JSON for now, as there is no API
 
 function FeaturedListings()
 {

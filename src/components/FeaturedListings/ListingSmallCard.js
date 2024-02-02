@@ -17,7 +17,9 @@ function ListingSmallCard(props)
             <div className="Listingcard--background">
                 <div className="Listingcard--infoContainer">
                     <h2 className="Listingcard--price">{formattedPrice}</h2>
-                    <p className="Listingcard--propertyInfo">{props.listingType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqmt</p>
+                    <p className="Listingcard--propertyInfo">
+                        {props.listingType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqm
+                    </p>
                     <p className="Listingcard--location">{props.location}</p>
                 </div>
             </div>
