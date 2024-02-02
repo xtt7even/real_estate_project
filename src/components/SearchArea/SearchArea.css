@@ -98,6 +98,5 @@
 
 .Searcharea--searchicon--img:hover
 {
-    align-self: center;
-    width: 25px;
+    transform: scale(1.2);
 }

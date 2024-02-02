@@ -5,6 +5,8 @@
     border-color:black;
     border-radius: 9px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    transition: all 0.2s ease;
 }
 
 .Featuredlistings--container
@@ -13,9 +15,16 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-
+ 
     /* padding: ; */
 }
+
+.Listingcard--container:hover
+{
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.45);
+}
+
 
 .Featuredlistings--container > h1
 {
