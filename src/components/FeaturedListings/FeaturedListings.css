@@ -1,0 +1,80 @@
+.Listingcard--container
+{
+    width: 300px;
+    border-width: 1px;
+    border-color:black;
+    border-radius: 9px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.Featuredlistings--container
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    /* padding: ; */
+}
+
+.Featuredlistings--container > h1
+{
+    font-family: Inter;
+    color: #062331;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.Featuredlistings--container > div
+{
+    display: flex;
+    justify-content: center ;
+    width: 100%;
+    gap: 56px;
+}
+
+.Listingcard--img
+{
+    max-width: 300px;
+    border-radius: 9px;
+}
+
+.Listingcard--background
+{
+    position: absolute;
+    /* top: 31%;
+    left: 50%; */
+    transform: translate(0%, -101%);
+    /* background: rgb(255,255,255); */
+    background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255, 255, 255, 0.94) 100%);
+    width: 300px;
+    min-height: 90px;
+    border-radius: 0 0px 9px 9px;
+}
+
+.Listingcard--infoContainer
+{
+    margin: 18px;
+    width: 300px;
+    max-height: 90px;
+    position: absolute;
+}
+
+.Listingcard--infoContainer > p, h2
+{
+    margin:0;
+    column-gap: 7px;
+
+    font-family: Inter;
+    color: #062331;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.Listingcard--price
+{
+    font-family: Inter;
+    color: #0a364c;
+    font-size: 18px;
+    font-weight: 600;
+}

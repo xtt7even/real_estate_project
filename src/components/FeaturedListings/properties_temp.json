@@ -1,0 +1,64 @@
+[
+    {
+      "price": 625000,
+      "propertyType": "House",
+      "numOfBedrooms": 3,
+      "numOfBathrooms": 3,
+      "location": "Oslo, Norway",
+      "photos": ["/house2.jpg", "house_photo2.jpg", "house_photo3.jpg"],
+      "id": 1,
+      "area": 347
+      
+    },
+    {
+      "price": 4565200,
+      "propertyType": "House",
+      "numOfBedrooms": 4,
+      "numOfBathrooms": 3,
+      "location": "Geneva, Switzerland",
+      "photos": ["/house1.jpg", "house_photo2.jpg", "house_photo3.jpg"],
+      "id": 2,
+      "area": 520
+    },
+    {
+      "price": 2325600,
+      "propertyType": "House",
+      "numOfBedrooms": 2,
+      "numOfBathrooms": 4,
+      "location": "Dresden, Germany",
+      "photos": ["/house3.jpg", "house_photo2.jpg", "house_photo3.jpg"],
+      "id": 3,
+      "area": 430
+    },
+    {
+      "price": 350000,
+      "propertyType": "villa",
+      "numOfBedrooms": 5,
+      "numOfBathrooms": 3,
+      "location": "France, Paris",
+      "photos": ["villa_photo1.jpg", "villa_photo2.jpg", "villa_photo3.jpg"],
+      "id": 4,
+      "area": 500
+    },
+    {
+      "price": 180000,
+      "propertyType": "apartment",
+      "numOfBedrooms": 3,
+      "numOfBathrooms": 2,
+      "location": "Germany, Berlin",
+      "photos": ["apartment_photo3.jpg", "apartment_photo4.jpg"],
+      "id": 5,
+      "area": 150
+    },
+    {
+      "price": 300000,
+      "propertyType": "house",
+      "numOfBedrooms": 4,
+      "numOfBathrooms": 3,
+      "location": "Canada, Toronto",
+      "photos": ["house_photo4.jpg", "house_photo5.jpg"],
+      "id": 6,
+      "area": 250
+    }
+  ]
+  

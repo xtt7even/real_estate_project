@@ -4,7 +4,7 @@ import logo from '../../images/logo2.png'
 
 export default function Navbar () {
     return(
-        <navbar className="Navbar">
+        <nav className="Navbar">
             <div className="Navbar--branding">
                  <img className='Navbar--logo--img' src={logo}></img>
                  <h2 className='Navbar--brandname'>Homelty</h2>
@@ -15,7 +15,7 @@ export default function Navbar () {
                 <button className='Navbar--nav--btn'>About Us</button>
                 <button className='Navbar--nav--btn'>Contact Us</button>
             </div>
-        </navbar>
+        </nav>
     );
 }
 
