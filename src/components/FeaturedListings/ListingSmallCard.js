@@ -1,5 +1,6 @@
 import React from "react";
 import './FeaturedListings.css'
+import proceedIcon from "../../images/angle-circle-right-icon.png"
 
 function ListingSmallCard(props)
 {
@@ -12,7 +13,7 @@ function ListingSmallCard(props)
     const formattedPrice = formatter.format(props.price)
     
     return (
-        <div className="Listingcard--container">
+        <button className="Listingcard--container">
             <img className='Listingcard--img' src={props.image}></img>
             <div className="Listingcard--background">
                 <div className="Listingcard--infoContainer">
@@ -22,8 +23,9 @@ function ListingSmallCard(props)
                     </p>
                     <p className="Listingcard--location">{props.location}</p>
                 </div>
+                <img className="Listingcard--proceed" src={proceedIcon}></img>
             </div>
-        </div>  
+        </button>  
     );
 }
 

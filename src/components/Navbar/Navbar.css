@@ -48,6 +48,7 @@
 
 .Navbar--nav--btn
 {
+    all: unset;
     font-family: Inter;
     font-weight: 300;
     font-size: 24px;
