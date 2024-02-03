@@ -1,6 +1,7 @@
 import React from 'react';
 import './Navbar.css' 
 import logo from '../../images/logo2.png'
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export default function Navbar () {
     return(
@@ -10,10 +11,10 @@ export default function Navbar () {
                  <h2 className='Navbar--brandname'>Homelty</h2>
             </div>
             <div className="Navbar--navigation">
-                <button className='Navbar--nav--btn'>Home Page</button>
-                <button className='Navbar--nav--btn'>Listings</button>
-                <button className='Navbar--nav--btn'>About Us</button>
-                <button className='Navbar--nav--btn'>Contact Us</button>
+                <Link to="/"className='Navbar--nav--btn'>Home Page</Link>
+                <Link to="/listings" className='Navbar--nav--btn'>Listings</Link>
+                <Link to="/aboutus" className='Navbar--nav--btn'>About Us</Link>
+                <Link to="/contact" className='Navbar--nav--btn'>Contact Us</Link>
             </div>
         </nav>
     );
