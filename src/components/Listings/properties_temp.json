@@ -36,7 +36,7 @@
       "numOfBedrooms": 5,
       "numOfBathrooms": 3,
       "location": "France, Paris",
-      "photos": ["villa_photo1.jpg", "villa_photo2.jpg", "villa_photo3.jpg"],
+      "photos": ["/nophotos_placeholder.jpg", "villa_photo2.jpg", "villa_photo3.jpg"],
       "id": 4,
       "area": 500
     },
@@ -46,7 +46,7 @@
       "numOfBedrooms": 3,
       "numOfBathrooms": 2,
       "location": "Germany, Berlin",
-      "photos": ["apartment_photo3.jpg", "apartment_photo4.jpg"],
+      "photos": ["/nophotos_placeholder.jpg", "apartment_photo4.jpg"],
       "id": 5,
       "area": 150
     },
@@ -56,7 +56,7 @@
       "numOfBedrooms": 4,
       "numOfBathrooms": 3,
       "location": "Canada, Toronto",
-      "photos": ["house_photo4.jpg", "house_photo5.jpg"],
+      "photos": ["/nophotos_placeholder.jpg", "house_photo5.jpg"],
       "id": 6,
       "area": 250
     }

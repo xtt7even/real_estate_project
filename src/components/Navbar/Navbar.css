@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: space-between;
     height: 110px;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.25);
 }
 
 .Navbar--branding
@@ -35,8 +36,9 @@
 .Navbar--logo--img
 {
     /* padding: 7px; */
+    /* display; */
     align-self: center;
-    max-width: 70px;
+    max-width: 50px;
 }
 
 .Navbar--navigation

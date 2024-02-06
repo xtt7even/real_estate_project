@@ -1,6 +1,6 @@
 import React from 'react';
 import './Navbar.css' 
-import logo from '../../images/logo2.png'
+import logo from '../../images/logo3.png'
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 
 export default function Navbar () {
