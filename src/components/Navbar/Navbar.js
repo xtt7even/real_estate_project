@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 export default function Navbar () {
     return(
         <nav className="Navbar">
-            <div className="Navbar--branding">
+            <Link to="/" className="Navbar--branding">
                  <img className='Navbar--logo--img' src={logo}></img>
                  <h2 className='Navbar--brandname'>Homelty</h2>
-            </div>
+            </Link>
             <div className="Navbar--navigation">
                 <Link to="/"className='Navbar--nav--btn'>Home Page</Link>
                 <Link to="/listings" className='Navbar--nav--btn'>Listings</Link>

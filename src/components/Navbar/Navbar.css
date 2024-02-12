@@ -9,6 +9,8 @@
 
 .Navbar--branding
 {
+    all: unset;
+
     display: flex;
     gap: 7px;
     margin-left: 30px; 
