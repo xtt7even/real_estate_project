@@ -1,14 +1,88 @@
 .Filters--container
 {
     min-width: 380px;
-    min-height: 630px;
+    /* min-height: 630px; */
+    min-height: 680px;
+    max-height: 680px;
     /* background-color: black; */
+
+    position: fixed;
+    top: 15%;
+    left: 3%;
+    overflow: hidden;
 
     border-style: solid;
     border-color: #D8D8D8;
     border-width: 1px;
     border-radius: 9px;
 
+    display: flex;
+    flex-direction: column;
+
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
-    margin: 37px;
+    /* margin: 37px; */
+    transition: all 0.1s ease;
 }
+
+.Filters--container--stick
+{
+    min-width: 380px;
+    /* min-height: 630px; */
+    min-height: 680px;
+    max-height: 680px;
+    /* background-color: black; */
+    position: fixed;
+    top: 1%;
+    left: 3%;
+    overflow: hidden;
+
+    border-style: solid;
+    border-color: #D8D8D8;
+    border-width: 1px;
+    border-radius: 9px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25);
+    /* margin: 37px; */
+    transition: all 0.5s ease;
+}
+
+.Filters--btn
+{
+    width: 150px;
+    height: 45px;
+    background-color: #062331;
+    /* margin: 20px 0px 0px 20px; */
+
+    border-style: solid;
+    /* border-color: #D8D8D8; */
+    border-width: 1px;
+    border-radius: 4px;
+
+    color: white;
+
+    font-family: Inter;
+    font-weight: 200;
+    font-size: 15px;
+}
+
+.Filters--btn:hover 
+{
+    background-color: #0c4968;
+}
+
+.Filter--buttons--container
+{
+    margin: 20px 0 0 20px;
+    display: flex;
+    gap: 40px
+}
+/* .Filters--reset--btn:focus 
+{
+    border-style: solid;
+    border-color: #6d6d6d;
+    border-width: 3px;
+    border-radius: 4px;
+} */
