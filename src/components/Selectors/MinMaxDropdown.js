@@ -17,11 +17,11 @@ function SimpleDropdown(props)
     }
 
     const dropdownOptionsMax = [
-        <option className="Dropdown--option--placeholder" value="none" disabled selected hidden>Max</option>
+        <option className="Dropdown--option--placeholder" value="none" selected hidden>Max</option>
     ];
 
     const dropdownOptionsMin = [
-        <option className="Dropdown--option--placeholder" value="none" disabled selected hidden>Min</option>
+        <option className="Dropdown--option--placeholder" value="none" selected hidden>Min</option>
     ];
 
     dropdownOptionsMax.push(values.map((option) => 
@@ -38,7 +38,7 @@ function SimpleDropdown(props)
             <div className="Dropdown--minmax--container">
                 <div className="Dropdown--select--container--minmax">
                     <div>
-                        <select className="Dropdown--select--minmax">
+                        <select onChange={(e) => props.setMin(e.target.value)} className="Dropdown--select--minmax">
                             {dropdownOptionsMin}
                         </select>
                     </div>
@@ -46,7 +46,7 @@ function SimpleDropdown(props)
                 </div>
                 <div className="Dropdown--select--container--minmax">
                     <div>
-                        <select className="Dropdown--select--minmax">
+                        <select onChange={(e) => props.setMax(e.target.value)} className="Dropdown--select--minmax">
                             {dropdownOptionsMax}
                         </select>
                     </div>

@@ -9,7 +9,7 @@ import dropdownArrow from "../../images/line-angle-down-icon.png"
 function SimpleDropdown(props)
 {
     const dropdownOptions = [
-        <option className="Dropdown--option--placeholder" value="none" disabled selected hidden>{props.placeholder}</option>
+        <option className="Dropdown--option--placeholder" value="none" selected hidden>{props.placeholder}</option>
     ];
 
     dropdownOptions.push(props.options.map((option) => 
@@ -32,7 +32,7 @@ function SimpleDropdown(props)
             <h3 className="Filter--title">{props.filterTitle}</h3>
             <div className="Dropdown--select--container">
                 <div className="dropdown">
-                    <select className="Dropdown--select">
+                    <select onChange={(e) => props.setFilter(e.target.value)} className="Dropdown--select">
                         {dropdownOptions}
                     </select>
                 </div>
