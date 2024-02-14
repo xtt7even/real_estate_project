@@ -2,8 +2,26 @@ import React from "react";
 import './Dropdown.css'
 import dropdownArrow from "../../images/line-angle-down-icon.png"
 
+
 function SimpleDropdown(props)
 {   
+
+    const optionMinId = "option--min--" + props.filterMin;
+    const optionMaxId = "option--max--" + props.filterMax;
+
+    function fixMinMax() 
+    {    
+        console.log("fixedMinMax")
+        console.log("filterMax:" + props.filterMax + "," + "filterMin:" + props.filterMin)
+        var optionMin = document.querySelector('#' + optionMinId);
+        var optionMax = document.querySelector('#' + optionMaxId);
+        if (optionMax.selectedIndex > 0  && (optionMin.selectedIndex >= optionMax.selectedIndex))
+        {
+            optionMin.selectedIndex = 0
+            props.setMin(0);
+        }
+    };
+
     let values = [];
     let divider = props.divider
 
@@ -15,6 +33,8 @@ function SimpleDropdown(props)
             iter = 1;
         }
     }
+
+
 
     const dropdownOptionsMax = [
         <option className="Dropdown--option--placeholder" value="none" selected hidden>Max</option>
@@ -30,7 +50,22 @@ function SimpleDropdown(props)
 
     dropdownOptionsMin.push(values.map((option) => 
     <option className="Dropdown--option" value={option}>{option + " " + props.description}</option>
-));
+    ));
+
+
+    function handleMinChange(e)
+    {
+        props.setMin(() => e.target.value); 
+    }
+
+    function handleMaxChange(e)
+    {
+        props.setMax(() => e.target.value);
+    }
+
+    React.useEffect(() => {
+        fixMinMax()
+    },[props.filterMin, props.filterMax]);
 
     return (
         <div>
@@ -38,7 +73,7 @@ function SimpleDropdown(props)
             <div className="Dropdown--minmax--container">
                 <div className="Dropdown--select--container--minmax">
                     <div>
-                        <select onChange={(e) => props.setMin(e.target.value)} className="Dropdown--select--minmax">
+                        <select id={optionMinId} onChange={(e) => handleMinChange(e)} className="Dropdown--select--minmax">
                             {dropdownOptionsMin}
                         </select>
                     </div>
@@ -46,7 +81,7 @@ function SimpleDropdown(props)
                 </div>
                 <div className="Dropdown--select--container--minmax">
                     <div>
-                        <select onChange={(e) => props.setMax(e.target.value)} className="Dropdown--select--minmax">
+                        <select id={optionMaxId} onChange={(e) => handleMaxChange(e)} className="Dropdown--select--minmax">
                             {dropdownOptionsMax}
                         </select>
                     </div>

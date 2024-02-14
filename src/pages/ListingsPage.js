@@ -13,7 +13,6 @@ function ListingsPage()
         <div>
             <Navbar />
             <div className="ListingsPage--container">
-                <ListingFilters/>
                 <AllListings />
             </div>
             <Footer />
