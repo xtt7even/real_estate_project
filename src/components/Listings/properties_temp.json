@@ -1,64 +1,182 @@
 [
-    {
-      "price": 625000,
-      "propertyType": "House",
-      "numOfBedrooms": 3,
-      "numOfBathrooms": 3,
-      "location": "Oslo, Norway",
-      "photos": ["/house2.jpg", "house_photo2.jpg", "house_photo3.jpg"],
-      "id": 1,
-      "area": 347
-      
-    },
-    {
-      "price": 4565200,
-      "propertyType": "House",
-      "numOfBedrooms": 4,
-      "numOfBathrooms": 3,
-      "location": "Geneva, Switzerland",
-      "photos": ["/house1.jpg", "house_photo2.jpg", "house_photo3.jpg"],
-      "id": 2,
-      "area": 520
-    },
-    {
-      "price": 2325600,
-      "propertyType": "House",
-      "numOfBedrooms": 2,
-      "numOfBathrooms": 4,
-      "location": "Dresden, Germany",
-      "photos": ["/house3.jpg", "house_photo2.jpg", "house_photo3.jpg"],
-      "id": 3,
-      "area": 430
-    },
-    {
-      "price": 350000,
-      "propertyType": "villa",
-      "numOfBedrooms": 5,
-      "numOfBathrooms": 3,
-      "location": "France, Paris",
-      "photos": ["/nophotos_placeholder.jpg", "villa_photo2.jpg", "villa_photo3.jpg"],
-      "id": 4,
-      "area": 500
-    },
-    {
-      "price": 180000,
-      "propertyType": "apartment",
-      "numOfBedrooms": 3,
-      "numOfBathrooms": 2,
-      "location": "Germany, Berlin",
-      "photos": ["/nophotos_placeholder.jpg", "apartment_photo4.jpg"],
-      "id": 5,
-      "area": 150
-    },
-    {
-      "price": 300000,
-      "propertyType": "house",
-      "numOfBedrooms": 4,
-      "numOfBathrooms": 3,
-      "location": "Canada, Toronto",
-      "photos": ["/nophotos_placeholder.jpg", "house_photo5.jpg"],
-      "id": 6,
-      "area": 250
-    }
-  ]
-  
+  {
+    "price": 350000,
+    "propertyType": "Villa",
+    "numOfBedrooms": 5,
+    "numOfBathrooms": 3,
+    "location": "France, Paris",
+    "photos": [
+      "/listings_photos/villas (1).png",
+      "villa_photo2.jpg",
+      "villa_photo3.jpg"
+    ],
+    "id": 1,
+    "area": 500,
+    "condition": "New"
+  },
+  {
+    "price": 280000,
+    "propertyType": "Apartment",
+    "numOfBedrooms": 2,
+    "numOfBathrooms": 1,
+    "location": "Spain, Barcelona",
+    "photos": [
+      "/listings_photos/apartaments (1).png",
+      "apartment_photo2.jpg",
+      "apartment_photo3.jpg"
+    ],
+    "id": 2,
+    "area": 120,
+    "condition": "Good Condition"
+  },
+  {
+    "price": 500000,
+    "propertyType": "House",
+    "numOfBedrooms": 4,
+    "numOfBathrooms": 2,
+    "location": "USA, Los Angeles",
+    "photos": [
+      "/listings_photos/houses (5).png",
+      "house_photo2.jpg",
+      "house_photo3.jpg"
+    ],
+    "id": 3,
+    "area": 300,
+    "condition": "To Be Repaired"
+  },
+  {
+    "price": 400000,
+    "propertyType": "Villa",
+    "numOfBedrooms": 6,
+    "numOfBathrooms": 4,
+    "location": "Italy, Rome",
+    "photos": [
+      "/listings_photos/villas (2).png",
+      "villa_photo2.jpg",
+      "villa_photo3.jpg"
+    ],
+    "id": 4,
+    "area": 600,
+    "condition": "New"
+  },
+  {
+    "price": 200000,
+    "propertyType": "Apartment",
+    "numOfBedrooms": 1,
+    "numOfBathrooms": 1,
+    "location": "Germany, Berlin",
+    "photos": [
+      "/listings_photos/apartaments (3).png",
+      "apartment_photo2.jpg",
+      "apartment_photo3.jpg"
+    ],
+    "id": 5,
+    "area": 80,
+    "condition": "Good Condition"
+  },
+  {
+    "price": 450000,
+    "propertyType": "House",
+    "numOfBedrooms": 5,
+    "numOfBathrooms": 3,
+    "location": "UK, London",
+    "photos": [
+      "/listings_photos/houses (3).png",
+      "house_photo2.jpg",
+      "house_photo3.jpg"
+    ],
+    "id": 6,
+    "area": 400,
+    "condition": "To Be Repaired"
+  },
+  {
+    "price": 370000,
+    "propertyType": "Villa",
+    "numOfBedrooms": 4,
+    "numOfBathrooms": 3,
+    "location": "France, Nice",
+    "photos": [
+      "/listings_photos/villas (3).png",
+      "villa_photo2.jpg",
+      "villa_photo3.jpg"
+    ],
+    "id": 7,
+    "area": 550,
+    "condition": "New"
+  },
+  {
+    "price": 690000,
+    "propertyType": "Apartment",
+    "numOfBedrooms": 3,
+    "numOfBathrooms": 2,
+    "location": "Spain, Madrid",
+    "photos": [
+      "/listings_photos/apartaments (6).png",
+      "apartment_photo2.jpg",
+      "apartment_photo3.jpg"
+    ],
+    "id": 8,
+    "area": 150,
+    "condition": "Good Condition"
+  },
+  {
+    "price": 520000,
+    "propertyType": "House",
+    "numOfBedrooms": 6,
+    "numOfBathrooms": 4,
+    "location": "USA, New York",
+    "photos": [
+      "/listings_photos/houses (2).png",
+      "house_photo2.jpg",
+      "house_photo3.jpg"
+    ],
+    "id": 9,
+    "area": 350,
+    "condition": "To Be Repaired"
+  },
+  {
+    "price": 380000,
+    "propertyType": "Villa",
+    "numOfBedrooms": 5,
+    "numOfBathrooms": 3,
+    "location": "Italy, Florence",
+    "photos": [
+      "/listings_photos/villas (4).png",
+      "villa_photo2.jpg",
+      "villa_photo3.jpg"
+    ],
+    "id": 10,
+    "area": 600,
+    "condition": "New"
+  },
+  {
+    "price": 250000,
+    "propertyType": "Apartment",
+    "numOfBedrooms": 2,
+    "numOfBathrooms": 1,
+    "location": "Germany, Munich",
+    "photos": [
+      "/listings_photos/apartaments (2).png",
+      "apartment_photo2.jpg",
+      "apartment_photo3.jpg"
+    ],
+    "id": 11,
+    "area": 100,
+    "condition": "Good Condition"
+  },
+  {
+    "price": 480000,
+    "propertyType": "House",
+    "numOfBedrooms": 4,
+    "numOfBathrooms": 3,
+    "location": "UK, Manchester",
+    "photos": [
+      "/listings_photos/houses (1).png",
+      "house_photo2.jpg",
+      "house_photo3.jpg"
+    ],
+    "id": 12,
+    "area": 300,
+    "condition": "To Be Repaired"
+  }
+]
