@@ -14,11 +14,13 @@ function Footer()
                 </div>
 
                 <div className="Footbar--address">
-
+                    <span>123 Main Street, City, State, ZIP</span> 
+                    <span>Phone: (123) 456-7890</span>
+                    <span>Email: info@homelty.com</span>
                 </div>
 
                 <div className="Footbar--copyright">
-
+                    © 2024 Homelty. All rights reserved.
                 </div>
             </div>
 
