@@ -4,5 +4,62 @@
     height: 278px;
     background-color: #062331;
     
+    display: flex;
+    justify-content: space-around;
+
+    position: absolute;
+
     margin-top: 70px;
+
+    font-family: Inter;
+}
+
+.Footbar--section
+{
+    
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    row-gap: 43px;
+    margin-top: 43px;
+    margin-bottom: 60px;
+    letter-spacing: 0.12em;
+    
+}
+
+.Footbar--section > h1, h2, h3, h4, h5 
+{
+    margin: 0;
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.Footbar--links
+{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.Footbar--link
+{
+    all: unset;
+
+    font-size: 16px;
+    font-weight: 200;
+
+    cursor: pointer;
+}
+
+.Footbar--link:hover
+{
+    color: rgba(255, 255, 255, 0.619);
+}
+
+#Footbar--logo
+{
+    width: 26px;
 }
