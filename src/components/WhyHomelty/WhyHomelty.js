@@ -8,7 +8,7 @@ function WhyHomelty()
     return(
         <div className="Whyhomelty--container">
             <div className="Benefits--list">
-                <h2>WhyHomelty?</h2>
+                <h2>Why Homelty?</h2>
                 <div className="Benefit--container">
                     <img src={checkMark} className="Checkmark--img"></img>
                     <p><b>Experience</b>: Benefit from our years of experience in the real estate industry, ensuring you receive expert guidance and support throughout your journey.</p>

@@ -106,7 +106,7 @@ function AllListings()
                 condition={condition}
             />
             {listings}
-            <button onClick={() => console.log([propertyType, priceMin, priceMax, areaMin, areaMax, bedrooms, bathrooms, condition])} className="Filters--btn">Foo</button>
+            {/* <button onClick={() => console.log([propertyType, priceMin, priceMax, areaMin, areaMax, bedrooms, bathrooms, condition])} className="Filters--btn">Foo</button> */}
         </div>
     );
 }

@@ -36,7 +36,8 @@
 
 .Featuredlistings--container
 {
-    
+    margin-top: 10px;
+    margin-left: 14px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -56,10 +57,11 @@
 
 .Featuredlistings--container > div
 {
+    /* margin-top: 10px; */
     display: flex;
-    justify-content: center ;
+    justify-content: center;
     width: 100%;
-    gap: 56px;
+    gap: 45px;
 }
 
 .Listingcard--img

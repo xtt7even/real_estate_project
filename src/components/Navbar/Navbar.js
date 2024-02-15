@@ -11,7 +11,7 @@ export default function Navbar () {
                  <h2 className='Navbar--brandname'>Homelty</h2>
             </Link>
             <div className="Navbar--navigation">
-                <Link to="/"className='Navbar--nav--btn'>Home Page</Link>
+                <Link to="/" className='Navbar--nav--btn'>Home Page</Link>
                 <Link to="/listings" className='Navbar--nav--btn'>Listings</Link>
                 <Link to="/aboutus" className='Navbar--nav--btn'>About Us</Link>
                 <Link to="/contact" className='Navbar--nav--btn'>Contact Us</Link>

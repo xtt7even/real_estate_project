@@ -1,6 +1,7 @@
 .ListingsPage--container{
     display: flex;
     justify-content: space-evenly;
-    min-height: 690px;
+    min-height: 800px;
+    /* margin-bott */
     /* width: auto;     */
 }
