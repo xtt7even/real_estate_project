@@ -1,8 +1,8 @@
 [
   {
-    "price": 350000,
+    "price": 2540000,
     "propertyType": "Villa",
-    "numOfBedrooms": 5,
+    "numOfBedrooms": 6,
     "numOfBathrooms": 3,
     "location": "France, Paris",
     "photos": [
@@ -11,11 +11,11 @@
       "villa_photo3.jpg"
     ],
     "id": 1,
-    "area": 500,
+    "area": 750,
     "condition": "New"
   },
   {
-    "price": 280000,
+    "price": 340000,
     "propertyType": "Apartment",
     "numOfBedrooms": 2,
     "numOfBathrooms": 1,
@@ -30,7 +30,7 @@
     "condition": "Good Condition"
   },
   {
-    "price": 500000,
+    "price": 980000,
     "propertyType": "House",
     "numOfBedrooms": 4,
     "numOfBathrooms": 2,
@@ -42,10 +42,10 @@
     ],
     "id": 3,
     "area": 300,
-    "condition": "To Be Repaired"
+    "condition": "Good Condition"
   },
   {
-    "price": 400000,
+    "price": 1630000,
     "propertyType": "Villa",
     "numOfBedrooms": 6,
     "numOfBathrooms": 4,
@@ -57,10 +57,10 @@
     ],
     "id": 4,
     "area": 600,
-    "condition": "New"
+    "condition": "Good Condition"
   },
   {
-    "price": 200000,
+    "price": 120000,
     "propertyType": "Apartment",
     "numOfBedrooms": 1,
     "numOfBathrooms": 1,
@@ -72,10 +72,10 @@
     ],
     "id": 5,
     "area": 80,
-    "condition": "Good Condition"
+    "condition": "To Be Repaired"
   },
   {
-    "price": 450000,
+    "price": 850000,
     "propertyType": "House",
     "numOfBedrooms": 5,
     "numOfBathrooms": 3,
@@ -87,10 +87,10 @@
     ],
     "id": 6,
     "area": 400,
-    "condition": "To Be Repaired"
+    "condition": "Good Condition"
   },
   {
-    "price": 370000,
+    "price": 1290000,
     "propertyType": "Villa",
     "numOfBedrooms": 4,
     "numOfBathrooms": 3,
@@ -102,10 +102,10 @@
     ],
     "id": 7,
     "area": 550,
-    "condition": "New"
+    "condition": "Good Condition"
   },
   {
-    "price": 690000,
+    "price": 980000,
     "propertyType": "Apartment",
     "numOfBedrooms": 3,
     "numOfBathrooms": 2,
@@ -117,7 +117,7 @@
     ],
     "id": 8,
     "area": 150,
-    "condition": "Good Condition"
+    "condition": "New"
   },
   {
     "price": 520000,
@@ -135,7 +135,7 @@
     "condition": "To Be Repaired"
   },
   {
-    "price": 380000,
+    "price": 1450000,
     "propertyType": "Villa",
     "numOfBedrooms": 5,
     "numOfBathrooms": 3,
@@ -147,10 +147,10 @@
     ],
     "id": 10,
     "area": 600,
-    "condition": "New"
+    "condition": "Good Condition"
   },
   {
-    "price": 250000,
+    "price": 450000,
     "propertyType": "Apartment",
     "numOfBedrooms": 2,
     "numOfBathrooms": 1,
