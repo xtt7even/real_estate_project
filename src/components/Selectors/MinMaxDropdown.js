@@ -11,8 +11,6 @@ function SimpleDropdown(props)
 
     function fixMinMax() 
     {    
-        console.log("fixedMinMax")
-        console.log("filterMax:" + props.filterMax + "," + "filterMin:" + props.filterMin)
         var optionMin = document.querySelector('#' + optionMinId);
         var optionMax = document.querySelector('#' + optionMaxId);
         if (optionMax.selectedIndex > 0  && (optionMin.selectedIndex >= optionMax.selectedIndex))

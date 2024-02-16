@@ -82,7 +82,7 @@ function AllListings() //small cards
             {selectedListing && 
               <div>
                 <ListingBig 
-                  property={properties[selectedListing]}
+                  property={properties[selectedListing-1]}
                   handleCloseBigListing={handleCloseBigListing}
                 />
                 <div id="ListingBig--background"></div>
