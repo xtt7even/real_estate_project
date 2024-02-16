@@ -1,5 +1,23 @@
 #ListingBig--background 
 {
+    position: fixed;
+    top: 0;
+    left: 0;
     min-width: 100%;
-    background-color: rgba(rgb(0, 0, 0), rgb(0, 0, 0), rgb(0, 0, 0), 0.45)
+    min-height: 100%;
+    background-color: rgb(0 0 0 / 0.4);
+    z-index: 1;
+}
+
+#ListingBig--container
+{
+    position: fixed;
+    /* top: 12%; */
+    top: 0;
+    left: 21%;
+    width: 60%;
+    min-height: 100%;
+    z-index: 2;
+
+    background-color: white;
 }

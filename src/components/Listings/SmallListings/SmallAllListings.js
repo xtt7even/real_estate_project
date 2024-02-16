@@ -3,6 +3,7 @@ import propertyList from '../properties_temp.json';
 import ListingSmallCard from "./ListingSmallCard";
 import ListingFilters from "../../ListingFilters/ListingFilters";
 
+import "../FullScreenListings/ListingBig.css"
 import "./SmallListingStyles.css"
 import ListingBig from "../FullScreenListings/ListingBig";
 
@@ -11,16 +12,16 @@ function AllListings() //small cards
 {
     const [selectedListing, setSelectedListing] = useState(null);
   
-    const handleOpenFullListing = (listing) => {
+    const handleOpenBigListing = (listing) => {
       setSelectedListing(listing);
     };
   
-    const handleCloseFullListing = () => {
+    const handleCloseBigListing = () => {
       setSelectedListing(null);
     };
   
+
     const [properties, setProperties] = useState(propertyList)
-    
     const [propertyType, setPropertyType] = useState();
     const [priceMin, setPriceMin] = useState();
     const [priceMax, setPriceMax] = useState();
@@ -62,7 +63,7 @@ function AllListings() //small cards
     const listings = filteredProperties.map((property) => 
         {
           return <ListingSmallCard 
-              key={property.id}
+              propid={property.id}
               image={property.photos[0]}
               price={property.price}
               listingType={property.propertyType}
@@ -70,12 +71,23 @@ function AllListings() //small cards
               numberOfBathrooms={property.numOfBathrooms}
               location={property.location}
               area={property.area}
+
+              handleOpenBigListing={handleOpenBigListing}
           />   
         }
     );
 
     return (
         <div className='AllListings--container'>
+            {selectedListing && 
+              <div>
+                <ListingBig 
+                  property={properties[selectedListing]}
+                  handleCloseBigListing={handleCloseBigListing}
+                />
+                <div id="ListingBig--background"></div>
+              </div>
+            }
             <ListingFilters
                 setPropertyType={setPropertyType}
                 setPriceMin={setPriceMin}

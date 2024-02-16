@@ -5,14 +5,6 @@ import ListingBig from "../FullScreenListings/ListingBig"
 
 function ListingSmallCard(props)
 {  
-    const [isClicked, setIsClicked] = React.useState(false);
-
-    function handleIsClicked()
-    {
-        setIsClicked(() => !isClicked);
-        console.log(isClicked)
-    }
-
 
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
@@ -22,10 +14,12 @@ function ListingSmallCard(props)
     });
     const formattedPrice = formatter.format(props.price)
 
-
+    const handleCardClick = () => {
+        props.handleOpenBigListing(props.propid)
+    }
 
     return (
-            <button onClick={handleIsClicked} className="Listingcard--container">
+            <button onClick={handleCardClick} className="Listingcard--container">
                 {/* {isClicked && <ListingBig propertyType={props.propertyType} price={props.   price}/>} */}
                 <img 
                     className='Listingcard--img' 
@@ -35,7 +29,7 @@ function ListingSmallCard(props)
                     <div className="Listingcard--infoContainer">
                         <h2 className="Listingcard--price">{formattedPrice}</h2>
                         <p className="Listingcard--propertyInfo">
-                            {props.listingType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqm
+                            {props.propertyType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqm
                         </p>
                         <p className="Listingcard--location">{props.location}</p>
                     </div>

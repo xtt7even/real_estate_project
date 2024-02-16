@@ -5,13 +5,13 @@ function ListingBig(props)
 {
     return (
         <div id="ListingBig--container">
+            <button onClick={() => props.handleCloseBigListing()}>Close</button>
             <div id="ListingBig--photocontainer">
-                {/* <img src=></img> */}
             </div>
 
             <div id="ListingBig--info--container">
-                <h4 id='ListingBig--title'>{props.propertyType + " in " + props.location}</h4>
-                <h3 id='ListingBig--price'>{props.price}</h3>
+                <h4 id='ListingBig--title'>{props.property.propertyType + " in " + props.property.location}</h4>
+                <h3 id='ListingBig--price'>{}</h3>
                 
                 <div id="ListingBig--features--container">
                     <div className="ListingBig--featurebox"></div>
@@ -25,7 +25,7 @@ function ListingBig(props)
                 <div id="ListingBig--desription--container">
                     <h4>Desription</h4>
                     <p>
-                        {props.desription}
+                        {props.property.description}
                     </p>
                 </div>
             </div>
@@ -38,7 +38,7 @@ function ListingBig(props)
                     <input type="text" className="Form--input--big" name="message"></input>
                 </form>
             </div>
-            <div id="ListingBig--background"></div>
+            
         </div>
     );
 }
