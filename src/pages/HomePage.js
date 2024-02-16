@@ -2,7 +2,7 @@ import React from "react";
 
 import Navbar from '../components/Navbar/Navbar';
 import SearchArea from '../components/SearchArea/SearchArea';
-import {FeaturedListings} from '../components/Listings/Listings';
+import FeaturedListings from '../components/Listings/SmallListings/SmallFeaturedListings';
 import WhyHomelty from '../components/WhyHomelty/WhyHomelty';
 import Footer from '../components/Footer/Footer';
 

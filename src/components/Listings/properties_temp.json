@@ -12,7 +12,8 @@
     ],
     "id": 1,
     "area": 750,
-    "condition": "New"
+    "condition": "New",
+    "description": "Elegant villa located in the prestigious city of Paris, offering luxurious living spaces, high-end finishes, and a private garden."
   },
   {
     "price": 340000,
@@ -27,7 +28,8 @@
     ],
     "id": 2,
     "area": 120,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Modern apartment located in the vibrant city of Barcelona, featuring stylish interiors, city views, and easy access to amenities."
   },
   {
     "price": 980000,
@@ -42,7 +44,8 @@
     ],
     "id": 3,
     "area": 300,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Charming house located in the bustling city of Los Angeles, featuring spacious interiors, a backyard, and proximity to entertainment."
   },
   {
     "price": 1630000,
@@ -57,7 +60,8 @@
     ],
     "id": 4,
     "area": 600,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Luxurious villa nestled in the historic city of Rome, offering grand living spaces, breathtaking views, and a private pool."
   },
   {
     "price": 120000,
@@ -72,7 +76,8 @@
     ],
     "id": 5,
     "area": 80,
-    "condition": "To Be Repaired"
+    "condition": "To Be Repaired",
+    "description": "Cozy apartment situated in the vibrant city of Berlin, featuring compact living spaces and potential for renovation."
   },
   {
     "price": 850000,
@@ -87,7 +92,8 @@
     ],
     "id": 6,
     "area": 400,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Spacious house located in the vibrant city of London, offering ample living spaces, a garden, and easy access to transportation."
   },
   {
     "price": 1290000,
@@ -102,7 +108,8 @@
     ],
     "id": 7,
     "area": 550,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Stunning villa located in the picturesque city of Nice, featuring elegant interiors, a private pool, and panoramic views of the Mediterranean."
   },
   {
     "price": 980000,
@@ -117,7 +124,8 @@
     ],
     "id": 8,
     "area": 150,
-    "condition": "New"
+    "condition": "New",
+    "description": "Modern apartment located in the vibrant city of Madrid, offering spacious living areas, modern amenities, and city views."
   },
   {
     "price": 520000,
@@ -132,7 +140,8 @@
     ],
     "id": 9,
     "area": 350,
-    "condition": "To Be Repaired"
+    "condition": "To Be Repaired",
+    "description": "Grand house in need of renovation, situated in the bustling city of New York, offering historic charm and spacious living areas."
   },
   {
     "price": 1450000,
@@ -147,7 +156,8 @@
     ],
     "id": 10,
     "area": 600,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Exquisite villa nestled in the Renaissance city of Florence, featuring opulent interiors, lush gardens, and stunning views of the Tuscan countryside."
   },
   {
     "price": 450000,
@@ -162,7 +172,8 @@
     ],
     "id": 11,
     "area": 100,
-    "condition": "Good Condition"
+    "condition": "Good Condition",
+    "description": "Cosmopolitan apartment located in the charming city of Munich, offering stylish interiors, city views, and proximity to amenities."
   },
   {
     "price": 480000,
@@ -177,6 +188,7 @@
     ],
     "id": 12,
     "area": 300,
-    "condition": "To Be Repaired"
+    "condition": "To Be Repaired",
+    "description": "Spacious house in need of renovation, located in the vibrant city of Manchester, offering generous living spaces and a charming backyard."
   }
 ]

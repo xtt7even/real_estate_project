@@ -1,43 +1,24 @@
-import React, { useEffect, useState } from "react";
-import propertyList from './properties_temp.json';
+import React, { useState } from "react";
+import propertyList from '../properties_temp.json';
 import ListingSmallCard from "./ListingSmallCard";
-import ListingFilters from "../ListingFilters/ListingFilters";
+import ListingFilters from "../../ListingFilters/ListingFilters";
 
-import "./Listings.css"
+import "./SmallListingStyles.css"
+import ListingBig from "../FullScreenListings/ListingBig";
 
-//Using local template JSON for now, as there is no API
 
-function MakeListingsCards(properties, isFeatured)
+function AllListings() //small cards
 {
-    const cardAmount = isFeatured ? 3 : properties.length;
-    // console.log(properties.length)
-    // console.log(properties)
-    let i = 0;
-    const listingsArr = properties.map((property) => 
-        {
-            if (!isFeatured || (i < 3)) {
-                i++;
-                return <ListingSmallCard 
-                    key={property.id}
-                    image={property.photos[0]}
-                    price={property.price}
-                    listingType={property.propertyType}
-                    numberOfBedrooms={property.numOfBedrooms}
-                    numberOfBathrooms={property.numOfBathrooms}
-                    location={property.location}
-                    area={property.area}
-                />
-            }
-            
-        }
-    );
-
-    return listingsArr
-}
-
-
-function AllListings()
-{
+    const [selectedListing, setSelectedListing] = useState(null);
+  
+    const handleOpenFullListing = (listing) => {
+      setSelectedListing(listing);
+    };
+  
+    const handleCloseFullListing = () => {
+      setSelectedListing(null);
+    };
+  
     const [properties, setProperties] = useState(propertyList)
     
     const [propertyType, setPropertyType] = useState();
@@ -78,15 +59,24 @@ function AllListings()
         return true;
     });
 
-
-
-
-    const listings = MakeListingsCards(filteredProperties, false);
+    const listings = filteredProperties.map((property) => 
+        {
+          return <ListingSmallCard 
+              key={property.id}
+              image={property.photos[0]}
+              price={property.price}
+              listingType={property.propertyType}
+              numberOfBedrooms={property.numOfBedrooms}
+              numberOfBathrooms={property.numOfBathrooms}
+              location={property.location}
+              area={property.area}
+          />   
+        }
+    );
 
     return (
         <div className='AllListings--container'>
             <ListingFilters
-            
                 setPropertyType={setPropertyType}
                 setPriceMin={setPriceMin}
                 setPriceMax={setPriceMax}
@@ -106,26 +96,9 @@ function AllListings()
                 condition={condition}
             />
             {listings}
-            {/* <button onClick={() => console.log([propertyType, priceMin, priceMax, areaMin, areaMax, bedrooms, bathrooms, condition])} className="Filters--btn">Foo</button> */}
         </div>
     );
 }
 
-function FeaturedListings()
-{
-    const [properties, setProperties] = useState(propertyList)
 
-    const featuredListings = MakeListingsCards(properties, true);
-
-    return (
-        <div className='Featuredlistings--container'>
-            <h1>Featured Listings</h1>
-            <div>
-                {featuredListings}
-            </div>
-            
-        </div>
-    );
-}
-
-export {FeaturedListings, AllListings};
+export default AllListings;

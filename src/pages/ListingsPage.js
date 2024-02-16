@@ -1,11 +1,11 @@
 import React from "react";
 import Navbar from "../components/Navbar/Navbar";
-import {AllListings} from "../components/Listings/Listings";
-import ListingFilters from "../components/ListingFilters/ListingFilters"
+import AllListings from "../components/Listings/SmallListings/SmallAllListings";
 import Footer from "../components/Footer/Footer" 
 
+// import ListingBig from "../components/Listings/ListingBig"
+
 import "./ListingsPage.css"
-// import Listings from "../components/Listings/Listings_old"
 function ListingsPage()
 {
 
