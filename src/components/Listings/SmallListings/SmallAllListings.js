@@ -18,6 +18,8 @@ function AllListings() //small cards
   
     const handleCloseBigListing = () => {
       setSelectedListing(null);
+      document.documentElement.style.overflow = 'scroll';
+      document.body.scroll = "none";
     };
   
 
