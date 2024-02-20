@@ -17,7 +17,7 @@ function ListingSmallCard(props)
     const handleCardClick = () => {
         props.handleOpenBigListing(props.propid)
         document.documentElement.style.overflow = 'hidden';
-        document.body.scroll = "no";
+        // document.body.scroll = "no";
     }
 
     return (

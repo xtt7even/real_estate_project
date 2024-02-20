@@ -19,7 +19,7 @@ function AllListings() //small cards
     const handleCloseBigListing = () => {
       setSelectedListing(null);
       document.documentElement.style.overflow = 'scroll';
-      document.body.scroll = "none";
+      // document.body.scroll = "none";
     };
   
 
@@ -82,7 +82,7 @@ function AllListings() //small cards
     return (
         <div className='AllListings--container'>
             {selectedListing && 
-              <div>
+              <div id="ListingBig">
                 <ListingBig 
                   property={properties[selectedListing-1]}
                   handleCloseBigListing={handleCloseBigListing}
