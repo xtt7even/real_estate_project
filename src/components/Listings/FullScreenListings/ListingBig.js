@@ -47,12 +47,14 @@ function ListingBig(props)
                     </div>
                 </div>
 
+                {/* <h4>Interested in this property? Contact Us!</h4> */}
                 <div id="ListingBig--form--container">
+                    
                     <form>
-                        <input type="text" className="Form--input--small" name="name"></input>
-                        <input type="text" className="Form--input--small" name="email"></input>
-                        <input type="text" className="Form--input--small" name="phonenumber"></input>
-                        <input type="text" className="Form--input--big" name="message"></input>
+                        <input type="text" className="Form--input--small" placeholder="Full Name" name="name"></input>
+                        <input type="text" className="Form--input--small" placeholder="E-Mail" name="email"></input>
+                        <input type="text" className="Form--input--small" placeholder="Phone Number" name="phonenumber"></input>
+                        <input type="text" className="Form--input--big" placeholder="Message" name="message"></input>
                     </form>
                 </div>
                 
