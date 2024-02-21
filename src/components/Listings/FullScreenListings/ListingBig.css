@@ -57,7 +57,7 @@
     overflow: hidden;
 
     margin-left: 5%;
-    margin-top: 25px;
+    margin-top: 5%;
 }
 
 #ListingBig--activephoto
@@ -80,6 +80,9 @@
 
 #right
 {
+    display: flex;
+    justify-content: center;
+
     right: 57px;
     background: linear-gradient(90deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 0%);
     border-radius: 0px 9px 9px 0px;
@@ -87,9 +90,33 @@
 
 #left
 {
+    display: flex;
+    justify-content: center;
+
     left: 57px;
     background: linear-gradient(270deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,1) 0%);
     border-radius: 9px 0px 0px 9px;
+}
+
+#left > img
+{
+    width: 40px;
+    align-self: center;
+    transition: all 0.2s ease;
+}
+
+#right > img
+{
+    align-self: center;
+    width: 40px;
+    rotate: 180deg;    
+    transition: all 0.2s ease;
+}
+
+#right > img:hover , #left > img:hover
+{
+    scale: 1.1;
+    cursor: pointer;
 }
 
 #ListingBig--info--container
@@ -97,7 +124,8 @@
     color: #062331;
 
     min-width: 100%;
-    height: 60%;
+    min-height: 60%;
+
 
     margin-top: 22px;
     margin-left: 55px;
@@ -119,12 +147,39 @@
     border-radius: 9px;
     width: 43.6%;
     height: 77px;
+
+    display: inline-flex;
+    align-items: center;
+    /* justify-content: ; */
+
+    /* padding: 30px; */
+    box-sizing: border-box;
 }
+
+.ListingBig--featurebox > img 
+{
+    width: 25px;
+    position: inherit;
+
+    margin-left: 30px;
+}
+
+.Feature--content
+{
+    min-width: 80%;
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+}
+
 
 #ListingBig--desription--container
 {
     width: 90%;
     margin-top: 25px;
+    font-size: 17px;
 }
 
 #ListingBig--desription--container > h4
@@ -134,27 +189,60 @@
 
 #ListingBig--form--container
 {
-    padding: 30px;
+    width: 100%;
+
+    display: flex;
+    gap: 17px;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    color:#062331;
+}
+
+#ListingBig--form--background
+{
+    padding: 22px 30px 22px 30px;
     box-sizing: border-box;
     background-color: #E8E8E8;
     width: 60%;
     height: 40%;
-    margin-left: 20%;
+    /* margin-left: 20%; */
 
     border-radius: 9px;
 
     display: flex;
-    margin-top: 40px;
-    margin-bottom: 50px;
     align-items: center;
     flex-direction: column;
 }
 
-#ListingBig--form--container > form
+#Form--sendbtn
+{
+    all: unset;
+    width: 25%;
+    height: 40px;
+
+    border-radius: 9px;
+    color: white;
+    text-align: center;
+    background-color: #062331;
+}
+
+#Form--sendbtn:hover
+{
+    background-color: #0b384e;
+    cursor: pointer;
+}
+
+#ListingBig--form--background > form
 {
     display: flex;
     flex-direction: column;
-    width: 95%;
+    align-items: center;
+
+    box-sizing: border-box;
+    width: 100%;
     gap: 22px;
 }
 
@@ -168,6 +256,8 @@
     border-radius: 9px;
     border-style: solid;
     height: 4vh;
+
+    width: 100%;
 }
 
 .Form--input--big
@@ -180,8 +270,30 @@
     border-radius: 9px;
     border-style: solid;
     height: 15vh;
+    width: 100%;
 }
 /* #ListingBig--form--container
 {
     height
 } */
+
+#ListingBig--closebtn
+{
+    all: unset;
+    float: right;
+    margin: 17px;
+}
+
+#ListingBig--closebtn > img
+{
+    width: 20px;
+    border-radius: 4px;
+}
+
+#ListingBig--closebtn:hover
+{
+    width: 20px;
+    height: 20px;
+    background-color: rgb(235, 235, 235);
+    cursor: pointer;
+}
