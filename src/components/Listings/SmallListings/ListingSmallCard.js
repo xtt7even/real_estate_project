@@ -17,12 +17,10 @@ function ListingSmallCard(props)
     const handleCardClick = () => {
         props.handleOpenBigListing(props.propid)
         document.documentElement.style.overflow = 'hidden';
-        // document.body.scroll = "no";
     }
 
     return (
             <button onClick={handleCardClick} className="Listingcard--container">
-                {/* {isClicked && <ListingBig propertyType={props.propertyType} price={props.   price}/>} */}
                 <img 
                     className='Listingcard--img' 
                     src={props.image}
@@ -31,7 +29,7 @@ function ListingSmallCard(props)
                     <div className="Listingcard--infoContainer">
                         <h2 className="Listingcard--price">{formattedPrice}</h2>
                         <p className="Listingcard--propertyInfo">
-                            {props.propertyType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqm
+                            {props.listingType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqm
                         </p>
                         <p className="Listingcard--location">{props.location}</p>
                     </div>
