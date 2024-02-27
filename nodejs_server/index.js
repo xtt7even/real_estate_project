@@ -1,13 +1,13 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const app = express();
+const port = 8080;
 const fs = require('node:fs');
 
-app.use(express.json())
+app.use(express.json());
 
-app.get('/hello', (req, res) => {
-  res.status(200).send('Hello World!');
-})
+app.get('/helloworld', (req, res) => {
+  res.status(200).send('Hello World!'.json());
+});
 
 app.get('/get_properties', (req, res) => {
   
@@ -19,8 +19,8 @@ app.get('/get_properties', (req, res) => {
     } catch (error) {
       res.status(404).send("File not found");
     }  
-})
+});
 
 app.listen(port, () => {
   console.log(`Homelty API is listening on port ${port}`);
-})
+});

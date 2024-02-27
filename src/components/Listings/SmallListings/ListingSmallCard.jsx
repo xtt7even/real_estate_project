@@ -15,6 +15,9 @@ function ListingSmallCard(props)
     const formattedPrice = formatter.format(props.price)
 
     const handleCardClick = () => {
+        const testingAPI = fetch("/get_properties")
+            .then(response => response.json())
+            .then(response => console.log(response))
         props.handleOpenBigListing(props.propid)
         document.documentElement.style.overflow = 'hidden';
     }
