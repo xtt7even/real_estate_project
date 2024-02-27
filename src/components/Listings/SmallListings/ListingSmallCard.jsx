@@ -15,7 +15,7 @@ function ListingSmallCard(props)
     const formattedPrice = formatter.format(props.price)
 
     const handleCardClick = () => {
-        const testingAPI = fetch("/get_properties")
+        const testingAPI = fetch("/get_property?" + "id=" + props.propid)
             .then(response => response.json())
             .then(response => console.log(response))
         props.handleOpenBigListing(props.propid)
