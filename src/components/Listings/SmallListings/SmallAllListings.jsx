@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import propertyList from '../properties_temp.json';
+import React, { useEffect, useState } from "react";
 import ListingSmallCard from "./ListingSmallCard";
 import ListingFilters from "../../ListingFilters/ListingFilters";
 
@@ -13,6 +12,9 @@ function AllListings() //small cards
     const [selectedListing, setSelectedListing] = useState(null);
   
     const handleOpenBigListing = (listing) => {
+      // const testingAPI = fetch("/get_property?" + "id=" + props.propid)
+      //   .then(response => response.json())  
+      //   .then(response => console.log(response))
       setSelectedListing(listing);
     };
   
@@ -21,9 +23,17 @@ function AllListings() //small cards
       document.documentElement.style.overflow = 'scroll';
       // document.body.scroll = "none";
     };
-  
 
-    const [properties, setProperties] = useState(propertyList)
+    useEffect(() => {
+      fetch("/get_properties")
+      .then(response => response.json())
+      .then(data => {
+        setProperties(data)
+        console.log(`data: ${data}`)
+      })
+    }, [])
+
+    const [properties, setProperties] = useState(null)
     const [propertyType, setPropertyType] = useState();
     const [priceMin, setPriceMin] = useState();
     const [priceMax, setPriceMax] = useState();
@@ -33,85 +43,87 @@ function AllListings() //small cards
     const [bathrooms, setBathrooms] = useState();
     const [condition, setCondition] = useState();
 
-    let filteredProperties = properties.filter(property => {
-        if (propertyType && property.propertyType !== propertyType) {
-          return false;
-        }
-        if (priceMin && property.price < priceMin) {
-          return false;
-        }
-        if (priceMax && property.price > priceMax) {
-          return false; 
-        }
-        if (areaMin && property.area < areaMin) {
-          return false;
-        }
-        if (areaMax && property.area > areaMax) {
-          return false;
-        }
-        if (bedrooms && property.numOfBedrooms < bedrooms) {
-          return false; 
-        }
-        if (bathrooms && property.numberOfBathrooms < bathrooms) {
-          return false; 
-        }
-        if (condition && property.condition !== condition) {
-          return false; 
-        }
-        
-        return true;
-    });
+    if (properties != null) {
+        let filteredProperties = properties.filter(property => {
+          if (propertyType && property.propertyType !== propertyType) {
+            return false;
+          }
+          if (priceMin && property.price < priceMin) {
+            return false;
+          }
+          if (priceMax && property.price > priceMax) {
+            return false; 
+          }
+          if (areaMin && property.area < areaMin) {
+            return false;
+          }
+          if (areaMax && property.area > areaMax) {
+            return false;
+          }
+          if (bedrooms && property.numOfBedrooms < bedrooms) {
+            return false; 
+          }
+          if (bathrooms && property.numberOfBathrooms < bathrooms) {
+            return false; 
+          }
+          if (condition && property.condition !== condition) {
+            return false; 
+          }
+          
+          return true;
+      });
 
-    const listings = filteredProperties.map((property) => 
-        {
-          return <ListingSmallCard 
-              propid={property.id}
-              image={property.photos[0]}
-              price={property.price}
-              listingType={property.propertyType}
-              numberOfBedrooms={property.numOfBedrooms}
-              numberOfBathrooms={property.numOfBathrooms}
-              location={property.location}
-              area={property.area}
+      const listings = filteredProperties.map((property) => 
+          {
+            return <ListingSmallCard 
+                propid={property.id}
+                image={property.photos[0]}
+                price={property.price}
+                listingType={property.propertyType}
+                numberOfBedrooms={property.numOfBedrooms}
+                numberOfBathrooms={property.numOfBathrooms}
+                location={property.location}
+                area={property.area}
 
-              handleOpenBigListing={handleOpenBigListing}
-          />   
-        }
-    );
+                handleOpenBigListing={handleOpenBigListing}
+            />   
+          }
+      );
 
-    return (
-        <div className='AllListings--container'>
-            {selectedListing && 
-              <div id="ListingBig">
-                <ListingBig 
-                  property={properties[selectedListing-1]}
-                  handleCloseBigListing={handleCloseBigListing}
-                />
-                <div id="ListingBig--background"></div>
-              </div>
-            }
-            <ListingFilters
-                setPropertyType={setPropertyType}
-                setPriceMin={setPriceMin}
-                setPriceMax={setPriceMax}
-                setAreaMin={setAreaMin}
-                setAreaMax={setAreaMax}
-                setBedrooms={setBedrooms}
-                setBathrooms={setBathrooms}
-                setCondition={setCondition}
+      return (
+          <div className='AllListings--container'>
+              {selectedListing && 
+                <div id="ListingBig">
+                  <ListingBig 
+                    property={properties[selectedListing-1]}
+                    handleCloseBigListing={handleCloseBigListing}
+                  />
+                  <div id="ListingBig--background"></div>
+                </div>
+              }
+              <ListingFilters
+                  setPropertyType={setPropertyType}
+                  setPriceMin={setPriceMin}
+                  setPriceMax={setPriceMax}
+                  setAreaMin={setAreaMin}
+                  setAreaMax={setAreaMax}
+                  setBedrooms={setBedrooms}
+                  setBathrooms={setBathrooms}
+                  setCondition={setCondition}
 
-                propertyType={propertyType}
-                priceMin={priceMin}
-                priceMax={priceMax}
-                areaMin={areaMin}
-                areaMax={areaMax}
-                bedrooms={bedrooms}
-                bathrooms={bathrooms}
-                condition={condition}
-            />
-            {listings}
-        </div>
-    );
+                  propertyType={propertyType}
+                  priceMin={priceMin}
+                  priceMax={priceMax}
+                  areaMin={areaMin}
+                  areaMax={areaMax}
+                  bedrooms={bedrooms}
+                  bathrooms={bathrooms}
+                  condition={condition}
+              />
+              {listings}
+          </div>
+      );
+    }
 }
 
 

@@ -1,7 +1,6 @@
 import React from "react";
 import './SmallListingStyles.css'
 import proceedIcon from "../../../images/angle-circle-right-icon.png"
-import ListingBig from "../FullScreenListings/ListingBig"
 
 function ListingSmallCard(props)
 {  
@@ -15,9 +14,7 @@ function ListingSmallCard(props)
     const formattedPrice = formatter.format(props.price)
 
     const handleCardClick = () => {
-        const testingAPI = fetch("/get_property?" + "id=" + props.propid)
-            .then(response => response.json())
-            .then(response => console.log(response))
+        
         props.handleOpenBigListing(props.propid)
         document.documentElement.style.overflow = 'hidden';
     }

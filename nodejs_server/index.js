@@ -9,13 +9,14 @@ app.get('/helloworld', (req, res) => {
   res.status(200).send('Hello World!'.json());
 });
 
-app.get('/get_property', (req, res) => {
+app.get('/get_properties', (req, res) => {
+    console.log("get properies request initiated")
     try {
       const properties = JSON.parse(fs.readFileSync('./temp_jsondata/properties_temp.json', 'utf8'));
-      res.status(200).send(
-        properties[req.query.id]
-      );
-    } catch (error) {
+      //if request contains an id param, responding with a specific property, otherwise the whole list
+      req.query.id ? res.status(200).send(properties[req.query.id]) : res.status(200).send(properties); 
+    } 
+    catch (error) {
         res.status(404).send(`An error occured while sending a request:\n ${error}`);
     }  
 });
