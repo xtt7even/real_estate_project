@@ -3,6 +3,7 @@ const app = express();
 const port = 8080;
 const fs = require('node:fs');
 const mysql = require('mysql');
+const { json } = require('express');
 
 app.use('/static', express.static('public'))
 
@@ -15,8 +16,8 @@ var dbConnection = mysql.createPool({
 });
 
 dbConnection.getConnection(function(err) {
-  if (err) throw err;
-    console.log("Connected!");
+  if (err) console.error(err);
+  console.log("MySQL database connected!");
 });
 
 // import * as propFetcher from './project_libs/propertiesFetcher.js';
@@ -64,13 +65,13 @@ async function injectImages(listings, images)
     console.log("Images sorted");
     console.log(listings.length)
     for (const listing in listings) {
-      listings[listing].images = [];
+      listings[listing].photos = [];
       console.log("Initializing images array in the listing params")
     }
     for (let image = 0, listing = images[0].listing_fk-1; listing < listings.length, image < images.length; image++) {
       console.log(images[image].listing_fk-1, listing, images[listing].listing_fk)
       if (images[image].listing_fk-1 !== listing) listing++;
-      listings[listing].images.push(images[image].photourl);
+      listings[listing].photos.push(images[image].photourl);
       console.log("Some magic with.. IDK WTF IS THIS, BUT IF YOU READ THIS IT SHOULD BE OK")
     }
     return listings;
@@ -100,8 +101,13 @@ app.get('/get_properties', (req, res) => {
     )
     .then ((listings) => {
         try {
-          console.log(listings)
-          res.status(200).send(listings);
+          // console.log(listings)
+          JSON.parse(JSON.stringify(listings));
+          let jsonListings = [];
+          listings.forEach((listing => {
+            jsonListings.push(listing);
+          }));
+          res.status(200).send(jsonListings);
         } 
         catch (error) {
           res.status(404).send(`An error occured while working on a request:\n ${error}\n(not ok.)`);
