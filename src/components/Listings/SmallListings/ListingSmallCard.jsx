@@ -13,8 +13,7 @@ function ListingSmallCard(props)
     });
     const formattedPrice = formatter.format(props.price)
 
-    const handleCardClick = () => {
-        
+    const handleCardClick = () => { 
         props.handleOpenBigListing(props.propid)
         document.documentElement.style.overflow = 'hidden';
     }
@@ -23,7 +22,7 @@ function ListingSmallCard(props)
             <button onClick={handleCardClick} className="Listingcard--container">
                 <img 
                     className='Listingcard--img' 
-                    src={props.image}
+                    src={"http://localhost:8080/static/" + props.image}
                 ></img>
                 <div className="Listingcard--background">
                     <div className="Listingcard--infoContainer">

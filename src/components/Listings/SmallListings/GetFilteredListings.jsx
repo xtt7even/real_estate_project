@@ -1,6 +1,6 @@
-export default function GetFilteredListings(properties, propertyType, priceMin, priceMax, areaMin, areaMax, bedrooms, bathrooms, condition, handleOpenBigListing) {
+export default function GetFilteredListings(properties, listingType, priceMin, priceMax, areaMin, areaMax, bedrooms, bathrooms, condition) {
   let filteredProperties = properties.filter(property => {
-      if (propertyType && property.propertyType !== propertyType) {
+      if (listingType && property.listingType !== listingType) {
         return false;
       }
       if (priceMin && property.price < priceMin) {
@@ -18,7 +18,7 @@ export default function GetFilteredListings(properties, propertyType, priceMin, 
       if (bedrooms && property.numOfBedrooms < bedrooms) {
         return false; 
       }
-      if (bathrooms && property.numberOfBathrooms < bathrooms) {
+      if (bathrooms && property.numOfBathrooms < bathrooms) {
         return false; 
       }
       if (condition && property.condition !== condition) {

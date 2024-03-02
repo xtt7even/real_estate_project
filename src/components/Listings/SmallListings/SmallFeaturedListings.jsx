@@ -16,7 +16,6 @@ function FeaturedListings()
     const handleCloseBigListing = () => {
       setSelectedListing(null);
       document.documentElement.style.overflow = 'scroll';
-      // document.body.scroll = "none";
     };
 
     useEffect(() => {
@@ -39,10 +38,10 @@ function FeaturedListings()
             {
                 i++;
                 return <ListingSmallCard 
-                    propid={property.id}
+                    propid={property.listingid}
                     image={property.photos[0]}
                     price={property.price}
-                    listingType={property.propertyType}
+                    listingType={property.listingType}
                     numberOfBedrooms={property.numOfBedrooms}
                     numberOfBathrooms={property.numOfBathrooms}
                     location={property.location}

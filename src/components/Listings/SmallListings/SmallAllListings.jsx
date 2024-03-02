@@ -40,7 +40,6 @@ function AllListings()
       .then(response => response.json())
       .then(data => {
         setProperties(data)
-        //console.log(`data: ${data}`)
       })
     }, [])
 
@@ -74,10 +73,10 @@ function AllListings()
 
       const listings = filteredListings.map((property) => {
           return <ListingSmallCard 
-              propid={property.id}
+              propid={property.listingid}
               image={property.photos[0]}
               price={property.price}
-              listingType={property.propertyType}
+              listingType={property.listingType}
               numberOfBedrooms={property.numOfBedrooms}
               numberOfBathrooms={property.numOfBathrooms}
               location={property.location}
