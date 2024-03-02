@@ -21,7 +21,7 @@ export default function GetFilteredListings(properties, listingType, priceMin, p
       if (bathrooms && property.numOfBathrooms < bathrooms) {
         return false; 
       }
-      if (condition && property.condition !== condition) {
+      if (condition && property.listingCondition !== condition) {
         return false; 
       }
       
