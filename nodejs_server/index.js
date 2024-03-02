@@ -20,14 +20,12 @@ dbConnection.getConnection(function(err) {
   console.log("MySQL database connected!");
 });
 
-// import * as propFetcher from './project_libs/propertiesFetcher.js';
 
 function getDataPromise (sql, connection) {
   return new Promise(function (resolve, reject) {
-    console.log("Retrieving some data from the DB")
+    console.log("Retrieving data from the DB")
     connection.query(sql, (error, result) => {
       if (error) {
-        console.log(error);
         reject (error);
       }
       resolve (result);
@@ -35,7 +33,7 @@ function getDataPromise (sql, connection) {
   });
 }
 
-
+//simple bubble sort for images, by listing_fk
 function imagesSort(images)
 {
   for (let i = 0; i < images.length - 1 - i; i++) {
@@ -52,6 +50,7 @@ function imagesSort(images)
   return images;
 }
 
+//function that allows us to wait the data from the db
 let sleep = ms => new Promise(r => setTimeout(r, ms));
 let waitFor = async function waitFor(func){
     while(!func()) await sleep(1000);
@@ -61,61 +60,54 @@ let waitFor = async function waitFor(func){
 async function injectImages(listings, images) 
 {
   if (await waitFor(() => (listings && images))) {
+
+    //sorting images by foreign key - listing_fk (id)
     images = imagesSort(images);
-    console.log("Images sorted");
-    console.log(listings.length)
+
+    //initializing photos prop in the listing object
     for (const listing in listings) {
       listings[listing].photos = [];
-      console.log("Initializing images array in the listing params")
     }
+
     for (let image = 0, listing = images[0].listing_fk-1; listing < listings.length, image < images.length; image++) {
-      console.log(images[image].listing_fk-1, listing, images[listing].listing_fk)
-      if (images[image].listing_fk-1 !== listing) listing++;
+      //image - current image in the images array fetched from the database, listing - current listing, also in the fetched data
+      //if images array listing id not equals to the current listing => listing++
+      if (images[image].listing_fk-1 !== listing) 
+      {
+        listing++;
+      }
+      //pushing current image (images[image]) image url into the listings.photos array prop.
       listings[listing].photos.push(images[image].photourl);
-      console.log("Some magic with.. IDK WTF IS THIS, BUT IF YOU READ THIS IT SHOULD BE OK")
     }
     return listings;
   }
 }
 
+//Promise for a database data fetch, returns parsed (merged with photos) objects array as a promise
+async function fetchData(dbConnection)
+{
+  let listings = await getDataPromise("SELECT * FROM listings", dbConnection);
+  let images = await getDataPromise("SELECT * FROM listing_images", dbConnection)
+  return injectImages(listings, images);
+} 
+
 app.get('/get_properties', (req, res) => {
     console.log(`\nGet properies request initiated, property id: ${req.query.id ? req.query.id : "whole list"}\nUser ip: ${req.socket.remoteAddress}\n`)
-    // const properties = JSON.parse(fs.readFileSync('./temp_jsondata/properties_temp.json', 'utf8'));
   
-    let listings = []; 
-    let images = [];
-
-    getDataPromise("SELECT * FROM listings", dbConnection)
-    .then(
-      function (result) {
-        listings = result;
-        return getDataPromise("SELECT * FROM listing_images", dbConnection)
-      }
-    )
-    .then (
-      function (result) {
-        images = result;
-        // console.log(listings.length)
-        return injectImages(listings, images);
-      }
-    )
-    .then ((listings) => {
-        try {
-          // console.log(listings)
-          JSON.parse(JSON.stringify(listings));
-          let jsonListings = [];
-          listings.forEach((listing => {
-            jsonListings.push(listing);
-          }));
-          res.status(200).send(jsonListings);
-        } 
-        catch (error) {
-          res.status(404).send(`An error occured while working on a request:\n ${error}\n(not ok.)`);
-        }  
-      }
-    )
-    
-
+    //On resolved fetchData promise we try to parse recieved promise (listings) as JSON and send it as response to the client
+    fetchData(dbConnection).then((listings) => {
+      try {
+        JSON.parse(JSON.stringify(listings));
+        let jsonListings = [];
+        listings.forEach((listing => {
+          jsonListings.push(listing);
+        }));
+        res.status(200).send(jsonListings);
+      } 
+      catch (error) {
+        res.status(404).send(`An error occured while working on a request:\n ${error}\n(not ok.)`);
+      }  
+    });
 });
   
 app.listen(port, () => {
