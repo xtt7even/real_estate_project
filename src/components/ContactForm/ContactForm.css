@@ -1,0 +1,109 @@
+#Contact--container
+{
+    font-family: Inter;
+
+    width: 100%;
+    min-height: 60vh;
+
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    align-items: center;
+}
+
+p
+{
+    margin: 0 0 10px 0;
+}
+
+#Form
+{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+#Form--submitarea
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+#Contact--form--container
+{
+    width: 50vh;
+    height: 48vh;
+    padding: 22px 44px 22px 44px;
+    box-sizing: border-box;
+    
+    border-radius: 9px;
+    box-shadow: 0px 2px 10px 4px rgba(0, 0, 0, 0.2);
+}
+
+#Form > input
+{
+    border-radius: 9px;
+    border-color: #E2E2E2;
+    border-width: 1px;
+    border-style: solid;
+
+    background-color: #FAFAFA;
+
+    padding-left: 20px;
+}
+
+.Form--smallfield
+{
+    all: unset;    
+    height: 5vh;
+}
+
+.Form--bigfield
+{
+    all: unset;
+
+    height: 10vh;
+}
+
+#Form--send--btn
+{
+    border: none;
+    border-radius: 9px;
+
+    width: 108px;
+    height: 34px;
+
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+    background-color: #006BA7;
+}
+
+#Contact--info--container
+{
+    width: 35vh;
+    height: 48vh;
+    background-color: #062331;
+    box-shadow: 0px 2px 10px 4px rgba(0, 0, 0, 0.2);
+
+    border-radius: 9px;
+}
+
+.Form--checkbox
+{
+    margin: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+#Chcekbox--area
+{
+    color: #062331;
+    font-weight: 400;
+
+    gap: 7px;
+    font-size: 14px;
+    display: flex;
+    align-self: center;
+}
