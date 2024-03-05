@@ -32,7 +32,7 @@ function ListingBig(props)
                             <div className="ListingBig--photo--shadows" id="left">
                                 <img src={photoChangeArrow}></img>
                             </div>
-                            <img id="ListingBig--activephoto" src={props.property.photos[0]}></img> {/* hardcoded for now, should be dynamic */}
+                            <img id="ListingBig--activephoto" src={"http://localhost:8080/static/" + props.property.photos[0]}></img> {/* hardcoded for now, should be dynamic */}
                             <div className="ListingBig--photo--shadows" id="right">
                                 <img src={photoChangeArrow}></img>
                             </div>
@@ -40,7 +40,7 @@ function ListingBig(props)
                 </div>
 
                 <div id="ListingBig--info--container">
-                    <h4 id='ListingBig--title'>{props.property.propertyType + " in " + props.property.location}</h4>
+                    <h4 id='ListingBig--title'>{props.property.listingType + " in " + props.property.location}</h4>
                     <h3 id='ListingBig--price'>{formattedPrice}</h3>
                     
                     <div id="ListingBig--features--container">
@@ -71,13 +71,13 @@ function ListingBig(props)
                         <div className="ListingBig--featurebox">
                             <img src={fileIcon}></img>
                             <div className="Feature--content">
-                                <p>Condition: {props.property.condition}</p>
+                                <p>Condition: {props.property.listingCondition}</p>
                             </div>
                         </div>
                         <div className="ListingBig--featurebox">
                             <img src={homeIcon}></img>
                             <div className="Feature--content">
-                                <p>Property Type: {props.property.propertyType}</p>
+                                <p>Property Type: {props.property.listingType}</p>
                             </div>
                         </div>
                     </div>
@@ -86,7 +86,7 @@ function ListingBig(props)
                     <div id="ListingBig--desription--container">
                         <h4>Desription</h4>
                         <p>
-                            {props.property.description}
+                            {props.property.listingDescription}
                         </p>
                     </div>
                 </div>
