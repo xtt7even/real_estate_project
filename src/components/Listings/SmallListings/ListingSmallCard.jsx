@@ -4,7 +4,6 @@ import proceedIcon from "../../../images/angle-circle-right-icon.png"
 
 function ListingSmallCard(props)
 {  
-
     const formatter = new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'EUR',
@@ -23,6 +22,7 @@ function ListingSmallCard(props)
                 <img 
                     className='Listingcard--img' 
                     src={"http://localhost:8080/static/" + props.image}
+                    onError = {(e) => {e.target.src = "/nophotos_placeholder.jpg"}}
                 ></img>
                 <div className="Listingcard--background">
                     <div className="Listingcard--infoContainer">
