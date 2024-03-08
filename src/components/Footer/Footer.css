@@ -86,3 +86,15 @@
     font-weight: 200;
     font-size: 16px;
 }
+
+#Footer--container--mobile
+{
+    min-width: 100%;
+    /* height: 278px; */
+    background-color: #062331;
+    
+    display: flex;
+    /* justify-content: space-around; */
+
+    font-family: Inter;
+}

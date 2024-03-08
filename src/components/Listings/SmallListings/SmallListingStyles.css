@@ -41,7 +41,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
- 
+
     /* padding: ; */
 }
 
@@ -124,4 +124,23 @@
 #ListingBig
 {
     display: flex;
+}
+
+/* Mobile Version */
+
+
+
+#Featured--container--mobile {
+    min-width: 100%;
+    flex-direction: column;
+    justify-self: center;
+  }
+
+#Featuredlistings--container
+{
+    all: unset;
+    margin: 0;
+    min-width: 100vw;
+    display: grid;
+    flex-direction: column;
 }

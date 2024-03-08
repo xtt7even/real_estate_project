@@ -3,10 +3,18 @@ import "./Footer.css"
 import { Link } from "react-router-dom";
 import logo_white from '../../images/logo3_white.png'
 
-function Footer()
+function Footer(props)
 {
+
+    const responsiveClass = {
+        footer: props.isDesktop ? 'Footer--container' : 'Footer--container--mobile',
+        branding: props.isDesktop ? 'Navbar--branding' : 'Navbar--branding--mobile',
+        brandname: props.isDesktop ? 'Navbar--brandname' : 'Navbar--brandname--mobile',
+        navigation: props.isDesktop ? 'Navbar--navigation' : 'Navbar--navigation--mobile'
+    }
+
     return (
-        <div id="Footer--container">
+        <div id={responsiveClass.footer}>
             <div id="Footer--cropper">
                 <div className="Footbar--section">
                     <div className="Footbar--branding">

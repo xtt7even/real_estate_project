@@ -4,7 +4,7 @@ import ListingSmallCard from "./ListingSmallCard";
 import ListingBig from "../FullScreenListings/ListingBig";
 import "../FullScreenListings/ListingBig.css"
 
-function FeaturedListings()
+function FeaturedListings(props)
 {
     const [properties, setProperties] = useState(null)
     const [selectedListing, setSelectedListing] = useState(null);
@@ -46,6 +46,8 @@ function FeaturedListings()
                     location={property.location}
                     area={property.area}
 
+                    isDesktop={props.isDesktop}
+
                     handleOpenBigListing={handleOpenBigListing}
                 />   
             }
@@ -54,7 +56,7 @@ function FeaturedListings()
       );
 
       return (
-          <div className='Featuredlistings--container'>
+          <div className='Featuredlistings--container' id={props.isDesktop ? '' : 'Featured--container--mobile'}>
               {selectedListing && 
                 <div id="ListingBig">
                   <ListingBig 
@@ -65,7 +67,7 @@ function FeaturedListings()
                 </div>
               }
               <h1>Featured Listings</h1>
-              <div>
+              <div id={props.isDesktop ? 'Featured--container' : 'Featured--container--mobile'}>
                   {featuredListings}
               </div>
               

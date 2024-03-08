@@ -35,6 +35,7 @@
 
 .Benefits--list > h2
 {
+    margin: 0 20px 20px 0;
     font-size: 32px;
     font-family: Inter;
     font-weight: 500;
