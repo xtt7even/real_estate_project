@@ -6,11 +6,11 @@ import FeaturedListings from '../components/Listings/SmallListings/SmallFeatured
 import WhyHomelty from '../components/WhyHomelty/WhyHomelty';
 import Footer from '../components/Footer/Footer';
 
-function HomePage()
+function HomePage(props)
 {
     return (
         <div>
-            <Navbar/>
+            <Navbar isDesktop={props.isDesktop}/>
             <SearchArea/>
             <FeaturedListings/>
             <WhyHomelty/>

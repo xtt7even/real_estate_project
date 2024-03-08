@@ -51,6 +51,12 @@
     margin-right: 30px;
 }
 
+.Navbar--navigation > button 
+{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
 .Navbar--nav--btn
 {
     all: unset;
@@ -68,4 +74,63 @@
 {
     cursor: pointer;
     color: #1ba5e9;
+}
+
+
+
+/* Mobile CSS */
+/* The styles below are for the reponsive mobile version (on small window width) */
+
+.Navbar--brandname--mobile
+{
+    
+
+    all: unset;
+    text-decoration: none;
+    font-family: Inter;
+    font-size: 48px;
+    color: white;
+    font-weight: 400;
+}
+
+.Navbar--branding--mobile
+{
+    text-decoration: none; 
+
+    display: flex;
+    gap: 10px;
+    justify-self: center;
+}
+
+.Navbar--mobile
+{
+    position: absolute;
+    display: grid;
+    align-items: center;
+    
+    width: 100vw;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 1  ;
+
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#Navbar--mobile--navimg
+{
+    margin-right: auto;
+    width: 35px;
+}
+
+#Navbar--mobile--navbtn
+{
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+
+.Navbar--navigation--mobile
+{
+    position: absolute;
+    justify-self: right;
 }
