@@ -11,10 +11,10 @@ function HomePage(props)
     return (
         <div>
             <Navbar isDesktop={props.isDesktop}/>
-            <SearchArea/>
-            <FeaturedListings/>
-            <WhyHomelty/>
-            <Footer/>
+            <SearchArea isDesktop={props.isDesktop}/>
+            {/* <FeaturedListings isDesktop={props.isDesktop}/> */}
+            {/* <WhyHomelty/> */}
+            {/* <Footer/> */}
         </div>
     );
 }

@@ -1,4 +1,4 @@
-body {
+body > #root {
     height: 100vh !important;
-    min-width: fit-content;
+    width: fit-content !important;
 }

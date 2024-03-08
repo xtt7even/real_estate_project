@@ -118,12 +118,12 @@
 
 #Navbar--mobile--navimg
 {
-    margin-right: auto;
     width: 35px;
 }
 
 #Navbar--mobile--navbtn
 {
+    margin-right: 10px;
     background-color: rgba(0, 0, 0, 0);
     border: none;
 }

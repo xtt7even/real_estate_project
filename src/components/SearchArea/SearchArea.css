@@ -101,3 +101,50 @@
 {
     transform: scale(1.2);
 }
+
+
+/* ---------------------------------------- */
+/* Mobile version */
+
+
+.Searcharea--container--mobile {
+    min-width: auto;    
+    /* overflow-x: hidden; */
+}
+
+.Photo--crop--mobile 
+{
+    position: relative;
+    max-width: 100%;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.Photo--crop--mobile > img{
+    max-width: 100%; 
+    z-index: 0;
+    scale: 2.2;
+    height: auto; 
+    transform: translate(-25%, -10%);
+}
+
+.Searcharea--area--mobile
+{
+    z-index: 1;
+    position: absolute;
+    margin-top: 10%;
+    width: 100%; /* Occupy the entire width of the image container */
+    height: 100%; /* Occupy the entire height of the image container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Searcharea--searchbar--mobile
+{
+    width: 85vw;
+}
+
