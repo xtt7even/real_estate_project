@@ -1,19 +1,22 @@
-.Footer--container
+#Footer--container
 {
-    width: 100%;
+    width: auto;
     height: 278px;
     background-color: #062331;
     
     display: flex;
-    gap: 180px;
-    /* justify-content: space-evenly; */
-    padding-left: 410px;
-
-    position: absolute;
-
-    /* margin-top: 70px; */
+    justify-content: space-around;
 
     font-family: Inter;
+}
+
+#Footer--cropper 
+{
+    max-width: 79vw;
+    height: 278px;
+
+    display: flex;
+    gap: 200px
 }
 
 .Footbar--section

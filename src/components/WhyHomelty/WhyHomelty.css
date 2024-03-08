@@ -16,7 +16,8 @@
 {
     box-sizing: border-box;
     width: 660px;
-    height: 367px;
+    height: auto;
+    min-height: 366px;
     display: flex;
     flex-direction: column;
 
@@ -41,7 +42,8 @@
 
 .Benefits--photo
 {
-    width:367px;
+    max-width:367px;
+    height: auto;
     
     border-width: 1px;
     border-radius: 9px;
@@ -51,9 +53,18 @@
 
 .Whyhomelty--container
 {
-    margin-top: 70px;
-    margin-bottom: 70px;
     display: flex;
     justify-content: center;
+    width: auto;
+    height: auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}
+
+#Whyhomelty--cropper
+{
+    display: flex;
+    align-items: center;
     gap: 10px;
+    max-width: 79vw;
 }
