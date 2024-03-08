@@ -23,7 +23,6 @@ function FeaturedListings()
       .then(response => response.json())
       .then(data => {
         setProperties(data)
-        console.log(`data: ${data}`)
       })
     }, [])
 

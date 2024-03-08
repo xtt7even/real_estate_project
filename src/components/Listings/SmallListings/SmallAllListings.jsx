@@ -72,7 +72,8 @@ function AllListings()
       );
 
       const listings = filteredListings.map((property) => {
-          return <ListingSmallCard 
+          return <ListingSmallCard
+              id={property.listingid} 
               propid={property.listingid}
               image={property.photos[0]}
               price={property.price}
