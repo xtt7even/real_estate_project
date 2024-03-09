@@ -6,16 +6,16 @@ import logo_white from '../../images/logo3_white.png'
 function Footer(props)
 {
 
-    const responsiveClass = {
+    const responsive = {
         footer: props.isDesktop ? 'Footer--container' : 'Footer--container--mobile',
-        branding: props.isDesktop ? 'Navbar--branding' : 'Navbar--branding--mobile',
+        footerCropper: props.isDesktop ? 'Footer--cropper' : 'Footer--cropper--mobile',
         brandname: props.isDesktop ? 'Navbar--brandname' : 'Navbar--brandname--mobile',
         navigation: props.isDesktop ? 'Navbar--navigation' : 'Navbar--navigation--mobile'
     }
 
     return (
-        <div id={responsiveClass.footer}>
-            <div id="Footer--cropper">
+        <div id={responsive.footer}>
+            <div id={responsive.footerCropper}>
                 <div className="Footbar--section">
                     <div className="Footbar--branding">
                         <img id="Footbar--logo" src={logo_white}></img>

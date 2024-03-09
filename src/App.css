@@ -1,4 +1,4 @@
-body > #root {
-    height: 100vh !important;
+body > #root > div {
+    min-height: fit-content !important;
     width: fit-content !important;
 }

@@ -14,7 +14,7 @@ function HomePage(props)
             <SearchArea isDesktop={props.isDesktop}/>
             {props.isDesktop && <FeaturedListings isDesktop={props.isDesktop}/>}
             <WhyHomelty isDesktop={props.isDesktop}/>
-            {props.isDesktop && <Footer isDesktop={props.isDesktop}/>}
+            <Footer isDesktop={props.isDesktop}/>
         </div>
     );
 }
