@@ -54,9 +54,11 @@ function FeaturedListings(props)
           
         }
       );
+      
+
 
       return (
-          <div className='Featuredlistings--container' id={props.isDesktop ? '' : 'Featured--container--mobile'}>
+          <div className='Featured--module' id={props.isDesktop ? '' : 'Featured--module--mobile'}>
               {selectedListing && 
                 <div id="ListingBig">
                   <ListingBig 

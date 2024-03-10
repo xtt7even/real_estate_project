@@ -95,6 +95,7 @@
     min-width: 100%;
     background-color: #062331;
     padding-left: 20px;
+    box-sizing: border-box;
     display: flex;
 
     font-family: Inter;

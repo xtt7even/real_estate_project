@@ -18,14 +18,14 @@ function ListingSmallCard(props)
     }
 
     return (
-            <button onClick={handleCardClick} className="Listingcard--container">
+            <button onClick={handleCardClick} className={props.isDesktop ? 'Listingcard--container' : "Listingcard--container--mobile"}>
                 <img 
                     className='Listingcard--img' 
                     src={"http://localhost:8080/static/" + props.image}
                     onError = {(e) => {e.target.src = "/nophotos_placeholder.jpg"}}
                 ></img>
                 <div className="Listingcard--background">
-                    <div className="Listingcard--infoContainer">
+                    <div className={props.isDesktop ? "Listingcard--infoContainer" : "Listingcard--infoContainer--mobile"}>
                         <h2 className="Listingcard--price">{formattedPrice}</h2>
                         <p className="Listingcard--propertyInfo">
                             {props.listingType} - {props.numberOfBedrooms} bds, {props.numberOfBathrooms} ba, {props.area} sqm

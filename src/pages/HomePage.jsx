@@ -12,7 +12,7 @@ function HomePage(props)
         <div>
             <Navbar isDesktop={props.isDesktop}/>
             <SearchArea isDesktop={props.isDesktop}/>
-            {props.isDesktop && <FeaturedListings isDesktop={props.isDesktop}/>}
+            <FeaturedListings isDesktop={props.isDesktop}/>
             <WhyHomelty isDesktop={props.isDesktop}/>
             <Footer isDesktop={props.isDesktop}/>
         </div>
