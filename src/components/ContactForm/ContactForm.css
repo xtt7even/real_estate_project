@@ -1,3 +1,8 @@
+#root > div 
+{
+    min-width: 100% !important;
+}
+
 #Contact--container
 {
     font-family: Inter;

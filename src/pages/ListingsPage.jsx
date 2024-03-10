@@ -6,16 +6,16 @@ import Footer from "../components/Footer/Footer"
 // import ListingBig from "../components/Listings/ListingBig"
 
 import "./ListingsPage.css"
-function ListingsPage()
+function ListingsPage(props)
 {
 
     return (
         <div>
-            <Navbar />
+            <Navbar isDesktop={props.isDesktop}/>
             <div className="ListingsPage--container">
-                <AllListings />
+                <AllListings isDesktop={props.isDesktop}/>
             </div>
-            <Footer />
+            <Footer isDesktop={props.isDesktop}/>
         </div>
     );
 }

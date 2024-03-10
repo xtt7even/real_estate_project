@@ -6,13 +6,13 @@ import ContactForm from "../components/ContactForm/ContactForm.jsx"
 
 import './ContactPage.css'
 
-function ContactPage()
+function ContactPage(props)
 {
     return (
         <div id="ContactPage--container">
-            <Navbar />
-            <ContactForm />
-            <Footer />
+            <Navbar isDesktop={props.isDesktop}/>
+            <ContactForm isDesktop={props.isDesktop}/>
+            <Footer isDesktop={props.isDesktop}/>
         </div>
     );
 }
