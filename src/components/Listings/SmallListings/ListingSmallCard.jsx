@@ -24,7 +24,7 @@ function ListingSmallCard(props)
                     src={"http://localhost:8080/static/" + props.image}
                     onError = {(e) => {e.target.src = "/nophotos_placeholder.jpg"}}
                 ></img>
-                <div className="Listingcard--background">
+                <div className={props.isDesktop ? "Listingcard--background" : "Listingcard--background--mobile"}>
                     <div className={props.isDesktop ? "Listingcard--infoContainer" : "Listingcard--infoContainer--mobile"}>
                         <h2 className="Listingcard--price">{formattedPrice}</h2>
                         <p className="Listingcard--propertyInfo">

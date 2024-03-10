@@ -65,7 +65,7 @@ function FeaturedListings(props)
                     property={properties[selectedListing-1]}
                     handleCloseBigListing={handleCloseBigListing}
                   />
-                  <div id="ListingBig--background"></div>
+                  <div id={props.isDesktop ? "ListingBig--background" : "ListingBig--background--mobile"} ></div>
                 </div>
               }
               <h1>Featured Listings</h1>

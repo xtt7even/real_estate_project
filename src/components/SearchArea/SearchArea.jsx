@@ -1,6 +1,6 @@
 import React from "react";
 import './SearchArea.css'
-import photo from '../../images/mainpage_photo.png'
+import photo from '../../images/mainpage_photo.jpg'
 import searchIcon from '../../images/search-line-icon.png'
 
 export default function SearchArea(props)
